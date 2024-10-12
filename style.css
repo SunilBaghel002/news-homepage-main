@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+    --font-family: "Inter", serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    font-family: var(--font-family);
+}
+
+.container {
+    max-width: 1000px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: fit-content;
+    margin-top: 50px;
+    /* background-color: aquamarine; */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.navItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.navItems a {
+    color: var(--Dark-grayish-blue);
+    text-decoration: none;
+    transition: all 0.5s linear;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 0.7fr 1fr;
+    column-gap: 30px;
+    row-gap: 10px;
+}
+
+.web {
+    max-width: 800px;
+    grid-area: 1/1/2/3;
+    background-image: url(assets/images/image-web-3-desktop.jpg);
+    background-size: cover;
+    height: 220px;
+
+}
+
+h1 {
+    grid-area: 2/1/3/2;
+    font-size: 45px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.text {
+    grid-area: 2/2/3/3;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+}
+
+.text button {
+    padding: 10px 20px 10px 20px;
+    width: fit-content;
+    border: none;
+    background-color: var(--Soft-red);
+    color: var(--Very-dark-blue);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 11px;
+    transition: all 0.5s linear;
+    cursor: pointer;
+
+}
+
+.info {
+    grid-area: 1/3/3/4;
+    background-color: var(--Very-dark-blue);
+    padding: 20px 15px 15px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
+}
+
+.info h2 {
+    font-size: 28px;
+    color: var(--Soft-orange);
+}
+
+.info h3 {
+    font-size: 18px;
+    display: inline;
+    color: var(--Off-white);
+    margin-top: 10px;
+    transition: all 0.5s linear;
+}
+
+.info p {
+    color: var(--Grayish-blue);
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.line {
+    border-top: 1px solid var(--Off-white);
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: 3/1/4/4;
+    column-gap: 30px;
+    margin-top: 40px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box .about h2 {
+    color: var(--Soft-red);
+    font-weight: 700;
+}
+
+.about h3 {
+    font-size: 15px;
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    transition: all 0.5s linear;
+}
+
+.about p {
+    font-size: 11px;
+    line-height: 1.2;
+    color: var(--Dark-grayish-blue);
+}
+
+.image {
+    max-width: 80px;
+}
+
+.image img {
+    width: 100%;
+}
+
+.text button:hover {
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+    font-weight: 800;
+}
+
+.navbar a:hover {
+    color: var(--Soft-orange);
+}
+
+.about h3:hover {
+    color: var(--Soft-red);
+    cursor: pointer;
+}
+
+.info h3:hover {
+    color: var(--Soft-orange);
+    cursor: pointer;
+}
+
+.content {
+    animation-name: movement;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes movement {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 30%;
+    }
+}
+
+@keyframes text {
+    from {
+        gap: 0px;
+    }
+
+    to {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        margin-top: 0px;
+        padding: 20px 30px 20px 30px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .web {
+        background-image: url(assets/images/image-web-3-mobile.jpg);
+        max-width: 930px;
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text {
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu {
+        background-image: url(assets/images/icon-menu.svg);
+        width: 40px;
+        height: 20px;
+        background-size: cover;
+    }
+
+    .navItems {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 100px;
+        margin-left: 30px;
+        animation-name: text;
+        animation-duration: 0.9s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-out;
+
+    }
+
+    .content {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        right: 0;
+        top: 0;
+        background-color: var(--Off-white);
+        height: 100%;
+        width: 70vw;
+    }
+
+    .close {
+        width: 20px;
+        background-image: url(assets/images/icon-menu-close.svg);
+        height: 20px;
+        background-size: cover;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+    }
+
+    .grey {
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .web {
+        max-width: 400px;
+        background-size: cover;
+        height: 300px;
+        background-image: url(assets/images/image-web-3-mobile.jpg);
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 310px){
+    .box img{
+        height: 100%;
+    }
+}
