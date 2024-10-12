@@ -26,6 +26,7 @@ body {
     justify-content: center;
     overflow-x: hidden;
     font-family: var(--font-family);
+    background-color: var(--Off-white);
 }
 
 .container {

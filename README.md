@@ -8,8 +8,8 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 ### Links
 
-- Solution URL: [here](https://www.frontendmentor.io/solutions/article-preview-component-solution-MtN-ZfSfPh)
-- Live Site URL: [here](https://sunilbaghel002.github.io/article-preview-component-master/)
+- Solution URL: [here](https://www.frontendmentor.io/solutions/news-homepage-solution-3OdCLAcnjh)
+- Live Site URL: [here](https://sunilbaghel002.github.io/news-homepage-main/)
 
 ## My process
 
